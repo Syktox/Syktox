@@ -17,6 +17,7 @@
 
 <div align="center">
   <img src="https://profile-counter.glitch.me/syktox/count.svg?"/>
+  ![snake gif](https://github.com/Syktox/Syktox/blob/output/github-snake-dark.svg)
 </div>
 
 ###
