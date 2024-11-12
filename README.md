@@ -16,12 +16,13 @@
 ###
 
 <div align="center">
-  <img src="https://profile-counter.glitch.me/syktox/count.svg?"  />
+  <img src="https://profile-counter.glitch.me/syktox/count.svg?"/>
 </div>
 
 ###
 
 <br clear="both">
+
 <div align="center">
   ![snake gif](https://github.com/Syktox/Syktox/blob/output/github-snake-dark.svg)
 </div>
