@@ -22,12 +22,13 @@
 ###
 
 <br clear="both">
-
-![snake gif](https://github.com/Syktox/Syktox/blob/output/github-snake-dark.svg)
-
+<div align="center">
+  ![snake gif](https://github.com/Syktox/Syktox/blob/output/github-snake-dark.svg)
+</div>
+  
 ###
 
-<div align="left">
+<div align="center">
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="248" height="50" alt="youtube logo"  />
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitch/default.svg" width="248" height="50" alt="twitch logo"  />
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg" width="248" height="50" alt="discord logo"  />
