@@ -1,0 +1,69 @@
+name: Generate Rotating Cube Page
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Generate rotating cube HTML file
+        run: |
+          mkdir -p output
+          echo "<!DOCTYPE html>
+          <html lang='en'>
+          <head>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <title>Rotating Cube</title>
+            <style>
+              body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f0f0f0; }
+              .cube {
+                position: relative;
+                width: 100px;
+                transform-style: preserve-3d;
+                transform: rotateX(45deg) rotateY(45deg);
+                animation: rotate 5s infinite linear;
+              }
+              .face {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: rgba(0, 128, 255, 0.8);
+                border: 2px solid #000;
+              }
+              .front  { transform: translateZ(50px); }
+              .back   { transform: rotateY(180deg) translateZ(50px); }
+              .left   { transform: rotateY(-90deg) translateZ(50px); }
+              .right  { transform: rotateY(90deg) translateZ(50px); }
+              .top    { transform: rotateX(90deg) translateZ(50px); }
+              .bottom { transform: rotateX(-90deg) translateZ(50px); }
+              @keyframes rotate {
+                from { transform: rotateX(45deg) rotateY(0deg); }
+                to { transform: rotateX(45deg) rotateY(360deg); }
+              }
+            </style>
+          </head>
+          <body>
+            <div class='cube'>
+              <div class='face front'></div>
+              <div class='face back'></div>
+              <div class='face left'></div>
+              <div class='face right'></div>
+              <div class='face top'></div>
+              <div class='face bottom'></div>
+            </div>
+          </body>
+          </html>" > output/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
