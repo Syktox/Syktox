@@ -23,7 +23,7 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/syktox/syktox/output/snake.svg" alt="Snake animation" />
+![snake gif](https://github.com/Syktox/Syktox/blob/output/github-snake-dark.svg)
 
 ###
 
